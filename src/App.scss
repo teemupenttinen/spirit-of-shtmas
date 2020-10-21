@@ -1,0 +1,24 @@
+@font-face {
+  font-family: christmasFont;
+  src: url("./assets/fonts/PWHappyChristmas.ttf");
+}
+
+body {
+  background-color: rgb(33, 80, 43);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: christmasFont;
+  font-weight: 100;
+  font-size: calc(10px + 5vmin);
+  color: white;
+}

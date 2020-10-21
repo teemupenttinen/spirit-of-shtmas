@@ -1,0 +1,19 @@
+{
+  "name": "spirit-of-shtmas",
+  "version": "1.0.0",
+  "description": "Spirit of Shitmas",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
