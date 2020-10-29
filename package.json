@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "deploy": "parcel build src/index.html && git push heroku main"
+    "build": "parcel build src/index.html",
+    "deploy": "npm run build && aws s3 sync dist/ s3://spirit-of-shtmas"
   },
   "license": "MIT",
   "devDependencies": {
