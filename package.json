@@ -4,7 +4,8 @@
   "description": "Spirit of Shitmas",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "heroku-postbuild": "parcel src/index.html"
   },
   "license": "MIT",
   "devDependencies": {
@@ -13,6 +14,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
+    "parcel-bundler": "^1.12.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   }
