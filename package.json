@@ -4,8 +4,7 @@
   "description": "Spirit of Shitmas",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "heroku-postbuild": "parcel src/index.html"
+    "start": "parcel src/index.html"
   },
   "license": "MIT",
   "devDependencies": {
