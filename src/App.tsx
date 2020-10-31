@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Snowflakes from './components/Snowflakes/Snowflakes';
+import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -8,11 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Spirit of Shitmas</h1>
       </header>
-      <div className="Menu">
-        <button>Start</button>
-        <button>Guide</button>
-        <button>Settings</button>
-      </div>
+      <Menu/>
       <Snowflakes/>
     </div>
   );

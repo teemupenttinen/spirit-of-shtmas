@@ -16,7 +16,9 @@ Run the app with:
 
     npm start
 
-### PoC design & idea
+Demo app can be found from http://spirit-of-shtmas.s3-website.eu-north-1.amazonaws.com/
+
+## PoC design & idea
 
 Here you can find the PoC design done in Figma 
 
