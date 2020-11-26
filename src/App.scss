@@ -7,9 +7,18 @@ $breakpoint-mobile: 480px;
   src: url("./assets/fonts/PWHappyChristmas.ttf");
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color:#274686;
   margin: 0;
+}
+
+#root {
+  height: 100%;
 }
 
 @keyframes animatedBackground {
@@ -22,6 +31,7 @@ body {
 }
 
 .App {
+  height: 100%;
   text-align: center;
   background-image: url('./assets/images/BG.png');
   background-repeat: repeat-x;

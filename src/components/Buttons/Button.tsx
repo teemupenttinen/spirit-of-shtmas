@@ -23,7 +23,7 @@ export default function Button({ backgroundColor, onClick, children }: React.Pro
     }
 
     &:hover {
-      background-color: yellow;
+      background-color: #362f97;
     }
   `;
   return <StyledButton onClick={onClick}>{children}</StyledButton>;

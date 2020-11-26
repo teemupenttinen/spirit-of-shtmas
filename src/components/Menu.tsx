@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "./Button/Button";
+import Button from "./Buttons/Button";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   const StyledMenu = styled.div`
@@ -21,8 +22,8 @@ export default function Menu() {
   `;
   return (
     <StyledMenu>
-      <Button>Start</Button>
-      <Button>Guide</Button>
+      <Link to="/"><Button>Start</Button></Link>
+      <Link to="/guide"><Button>Guide</Button></Link>
       <Button>Settings</Button>
     </StyledMenu>
   );
