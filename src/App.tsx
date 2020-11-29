@@ -3,6 +3,8 @@ import "./App.scss";
 import LandingPage from "./components/LandingPage";
 import Guide from "./components/Guide";
 import Settings from "./components/Settings";
+import Game from "./components/Guide/Game";
+import Rules from "./components/Guide/Rules";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import jingleUrl from "./assets/sounds/jingle.mp3";
@@ -10,45 +12,49 @@ import jingleUrl from "./assets/sounds/jingle.mp3";
 const history = createBrowserHistory();
 
 function App() {
-  const [music, setMusic] = useState(false);
-  const [sound, setSound] = useState(false);
+  const [music, setMusic] = useState(true);
+  const [sound, setSound] = useState(true);
 
-  const musicSettingsHandler: React.ChangeEvent<HTMLInputElement> = (event) => {
-    setMusic(event.target.checked);
-    localStorage.setItem(
-      event.target.getAttribute("name"),
-      event.target.checked
-    );
+  const audioPlayerRef = React.createRef();
+
+  const musicSettingsHandler = (event) => {
+    const isChecked = event.target.checked;
+
+    setMusic(isChecked);
+    localStorage.setItem(event.target.getAttribute("name"), isChecked);
+
+    isChecked ? audioPlayerRef.current.play() : audioPlayerRef.current.pause();
   };
 
-  const soundSettingsHandler: React.ChangeEvent<HTMLInputElement> = (event) => {
-    setSound(event.target.checked);
-    localStorage.setItem(
-      event.target.getAttribute("name"),
-      event.target.checked
-    );
+  const soundSettingsHandler = (event) => {
+    const isChecked = event.target.checked;
+
+    setSound(isChecked);
+    localStorage.setItem(event.target.getAttribute("name"), isChecked);
   };
 
   useEffect(() => {
-    const s = localStorage.getItem("sound");
-    const m = localStorage.getItem("music");
-
-    if(s && s === 'true') {
-      setSound(true);
+    if (localStorage.getItem("sound") === "false") {
+      setSound(false);
     }
 
-    if(m && m === 'true') {
-      setMusic(true);
+    if (localStorage.getItem("music") === "false") {
+      setMusic(false);
     }
-    console.log(s);
   }, []);
-  
+
   return (
     <div className="App">
       <Router history={history}>
         <Switch>
           <Route path="/guide">
             <Guide />
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+          <Route path="/rules">
+            <Rules />
           </Route>
           <Route path="/settings">
             <Settings
@@ -63,7 +69,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <audio src={jingleUrl} loop controls autoPlay={music}></audio>
+      <audio src={jingleUrl} ref={audioPlayerRef} loop autoPlay={music}></audio>
     </div>
   );
 }
