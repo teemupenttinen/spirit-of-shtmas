@@ -2,7 +2,7 @@ import React from "react";
 import BoxContainer from "./BoxContainer";
 import Button from "./Buttons/Button";
 
-export default function LandingPage() {
+export default function Guide() {
   return (
     <>
       <header className="App-header">
