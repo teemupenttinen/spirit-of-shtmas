@@ -5,6 +5,7 @@ import Guide from "./components/Guide";
 import Settings from "./components/Settings";
 import Game from "./components/Guide/Game";
 import Rules from "./components/Guide/Rules";
+import NewGame from "./components/NewGame";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import jingleUrl from "./assets/sounds/jingle.mp3";
@@ -47,6 +48,9 @@ function App() {
     <div className="App">
       <Router history={history}>
         <Switch>
+          <Route path="/newgame">
+            <NewGame />
+          </Route>
           <Route path="/guide">
             <Guide />
           </Route>

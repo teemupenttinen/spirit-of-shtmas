@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import BackButton from "./Buttons/BackButton";
+import IconButton from "./Buttons/IconButton";
+import BackIcon from "../assets/svg/arrowback.svg";
 
 interface Props {
   showBackButton?: string;
@@ -45,7 +46,7 @@ export default function BoxContainer({
     <Container>
       {showBackButton ? (
         <BackButtonContainer>
-          <BackButton onClick={handleBackButton} />
+          <IconButton icon={BackIcon} onClick={handleBackButton} />
         </BackButtonContainer>
       ) : null}
 

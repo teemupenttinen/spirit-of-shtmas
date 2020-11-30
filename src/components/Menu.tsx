@@ -23,7 +23,7 @@ const StyledMenu = styled.div`
 export default function Menu() {
   return (
     <StyledMenu>
-      <Link to="/">
+      <Link to="/newgame">
         <Button>Start</Button>
       </Link>
       <Link to="/guide">
