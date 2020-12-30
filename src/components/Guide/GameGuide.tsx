@@ -1,7 +1,7 @@
 import React from "react";
 import BoxContainer from "../BoxContainer";
 
-export default function Game() {
+export default function GameGuide() {
   return (
     <>
       <header className="App-header">

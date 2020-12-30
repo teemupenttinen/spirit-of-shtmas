@@ -6,7 +6,7 @@ This will be *the gameshow game* of the Christmas.
 
 It will be brutal and christmas spirit breaking experience.
 
-Not entirely sure what this will evolve into, but expecting to boost the spirit of this 2020 Christmas with it.
+Not entirely sure what this will evolve into, but expecting to boost the spirit of 2021 Christmas with it.
 
 ## Development
 
